@@ -43,11 +43,11 @@ class Ripple extends Component {
 Ripple.propTypes = {
   containerWidth:PropTypes.number,
   containerHeight:PropTypes.number,
-  rippleWidth: PropTypes.number,
-  rippleHeight: PropTypes.number,
   xPos:PropTypes.number,
   yPos:PropTypes.number,
-  color: PropTypes.string
+  rippleWidth: PropTypes.number,
+  rippleHeight: PropTypes.number,
+  color: PropTypes.string.isOptional
 }
 
 export default Ripple;
