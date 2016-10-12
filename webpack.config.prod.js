@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/App.js',
+  entry: './src/Ripple/Ripple.js',
   output: {
     path: './build',
     filename: 'build.js'
@@ -18,5 +18,8 @@ module.exports = {
         loaders: ['style','css']
       }
     ]
+  },
+  externals: {
+    "react": "react"
   }
 }

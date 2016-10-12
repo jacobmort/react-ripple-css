@@ -1,16 +1,16 @@
 {
   "name": "react-ripple-css",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "React component for rendering material design ripple effect using CSS animations",
   "main": "./build/build.js",
   "scripts": {
     "test": "jest",
     "start": "webpack-dev-server --inline --hot --output-public-path=build",
-    "build": "webpack -p"
+    "build": "webpack --config webpack.config.prod.js"
   },
   "jest": {
     "moduleNameMapper": {
-        "(css|less)$": "<rootDir>/src/styleMock.js"
+      "(css|less)$": "<rootDir>/src/styleMock.js"
     }
   },
   "repository": {
@@ -34,6 +34,7 @@
     "react": "^15.3.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.16.0",
     "babel-core": "^6.17.0",
     "babel-jest": "^16.0.0",
     "babel-loader": "^6.2.5",
