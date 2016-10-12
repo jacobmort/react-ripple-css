@@ -1,0 +1,14 @@
+.container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  vertical-align: center;
+  background: #3F51B5;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.container a {
+  color: #FFA000;
+}
