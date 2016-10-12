@@ -4,7 +4,8 @@ module.exports = {
   entry: './src/Ripple/Ripple.js',
   output: {
     path: './build',
-    filename: 'build.js'
+    filename: 'build.js',
+    libraryTarget: "umd"
   },
   module: {
     loaders: [
