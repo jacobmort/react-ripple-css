@@ -47,7 +47,7 @@ Ripple.propTypes = {
   yPos:PropTypes.number,
   rippleWidth: PropTypes.number,
   rippleHeight: PropTypes.number,
-  color: PropTypes.string.isOptional
+  color: PropTypes.string
 }
 
 export default Ripple;
