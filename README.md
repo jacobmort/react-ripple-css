@@ -1,4 +1,6 @@
-## React Ripple CSS
+[![Build Status](https://travis-ci.org/ubien/react-ripple-css.svg?branch=master)](https://travis-ci.org/ubien/react-ripple-css.svg?branch=master)
+
+# React Ripple CSS
 React component for rendering Google Material Design-style ripples on click (or other) events.  One `<Ripple />` can handle click events from anywhere in the Component.
 
 #### Usage
