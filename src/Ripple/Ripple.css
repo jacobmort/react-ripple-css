@@ -2,15 +2,18 @@
   position: absolute;
   border-radius: 50%;
   animation: ripple-animation 1s;
+  -webkit-animation: ripple-animation 1s;
 }
 
 @keyframes ripple-animation {
     from {
       transform: scale(0);
+      -webkit-transform: scale(0);
       opacity: 0.4;
     }
     to {
       transform: scale(2);
+      -webkit-transform: scale(2);
       opacity: 0;
     }
 }
