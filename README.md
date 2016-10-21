@@ -3,40 +3,28 @@
 # React Ripple CSS
 React component for rendering Google Material Design-style ripples on click (or other) events.  One `<Ripple />` can handle click events from anywhere in the Component.
 
+`RippleHelper` can be included in your parent component to aide in setting up state and handling clicks.
+
 #### Usage
 ```js
-Ripple.propTypes = {
-  containerWidth:PropTypes.number,
-  containerHeight:PropTypes.number,
-  xPos:PropTypes.number,
-  yPos:PropTypes.number,
-  rippleWidth: PropTypes.number,
-  rippleHeight: PropTypes.number,
-  color: PropTypes.string
-}
-```
-```js
+...
+import {Ripple, RippleHelper} from 'react-ripple-css';
+
 class App extends React.Component {
   constructor(){
     super();
     this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      containerHeight: null,
-      containerWidth: null,
-      clickXPos: null,
-      clickYPos: null
-    }
+    this.state =
+      Object.assign({SOME_STATE: SOME_VALUE}, RippleHelper.getInitialState()
+      );
   }
 
   handleClick(e) {
-    const rect = e.target.getBoundingClientRect();
-    this.setState({
-      containerHeight: rect.height,
-      containerWidth: rect.width,
-      clickXPos: e.pageX,
-      clickYPos: e.pageY
-    });
+    this.setState(
+      Object.assign(this.state, RippleHelper.handleClick(e))
+    );
   }
+
   render(){
     return(
       <div className="container">
@@ -54,4 +42,16 @@ class App extends React.Component {
   }
 }
 
+```
+##### Ripple Props
+```js
+Ripple.propTypes = {
+  containerWidth:PropTypes.number,
+  containerHeight:PropTypes.number,
+  xPos:PropTypes.number,
+  yPos:PropTypes.number,
+  rippleWidth: PropTypes.number,
+  rippleHeight: PropTypes.number,
+  color: PropTypes.string
+}
 ```

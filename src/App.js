@@ -2,27 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
 import Ripple from './Ripple/Ripple';
+import RippleHelper from './Ripple/RippleHelper';
 
 class App extends React.Component {
   constructor(){
     super();
     this.handleClick = this.handleClick.bind(this);
-    this.state = {
-      containerHeight: null,
-      containerWidth: null,
-      clickXPos: null,
-      clickYPos: null
-    }
+    this.state = RippleHelper.getInitialState();
   }
 
   handleClick(e) {
-    const rect = e.target.getBoundingClientRect();
-    this.setState({
-      containerHeight: rect.height,
-      containerWidth: rect.width,
-      clickXPos: e.pageX,
-      clickYPos: e.pageY
-    });
+    this.setState(
+      Object.assign(this.state, RippleHelper.handleClick(e))
+    );
   }
   render(){
     return(

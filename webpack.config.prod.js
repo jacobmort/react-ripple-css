@@ -1,7 +1,7 @@
 var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/Ripple/Ripple.js',
+  entry: './src/index.js',
   output: {
     path: './build',
     filename: 'build.js',
